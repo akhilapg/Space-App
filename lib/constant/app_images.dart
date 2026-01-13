@@ -4,4 +4,5 @@ class AppImages{
   static String background_shadow="assets/shadow.png";
   static String circular_rounded="assets/circular_rounded.png";
   static String app_logo="assets/logo.png";
+  static String login_image="assets/login_page.png";
 }

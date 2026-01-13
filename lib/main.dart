@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:space_app/screens/login_screen.dart';
 import 'package:space_app/screens/splash_screen.dart';
 
 void main(){
@@ -11,6 +12,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: SplashScreen(),);
+      home: LoginScreen(),);
   }
 }
