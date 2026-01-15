@@ -28,6 +28,8 @@ class SplashScreen extends StatelessWidget {
             Center(child: Image.asset(AppImages.white_circular)),
           ],
         ),
+        resizeToAvoidBottomInset: true,
+        primary: true,
       ),
     );
   }
