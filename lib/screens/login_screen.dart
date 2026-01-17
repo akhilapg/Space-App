@@ -25,8 +25,8 @@ class LoginScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         body: Column(
           children: [
-            SizedBox(height: 50),
-            Image.asset(AppImages.login_image, height: 80),
+            SizedBox(height: 30),
+            Image.asset(AppImages.login_image, height: 50),
             SizedBox(height: height * 0.16),
             BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 0.0, sigmaY: 0.0),
@@ -51,21 +51,21 @@ class LoginScreen extends StatelessWidget {
                           "Sign In",
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 28,
+                            fontSize: 23,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                      SizedBox(height: 10),
+                      SizedBox(height: 5),
 
                       inputField(hint: "Email", icon: Icons.email),
-                      SizedBox(height: 10),
+                      SizedBox(height: 5),
                       inputField(
                         hint: "Password",
                         icon: Icons.lock,
                         isPassword: true,
                       ),
-                      SizedBox(height: 10),
+                      SizedBox(height: 5),
                       Align(
                         alignment: Alignment.centerLeft,
                         child: TextButton(
@@ -76,10 +76,10 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 10),
+                      SizedBox(height: 5),
                       Container(
                         width: double.infinity,
-                        height: 50,
+                        height: 40,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           color: Colors.cyan,
@@ -89,7 +89,7 @@ class LoginScreen extends StatelessWidget {
                             "Sign in",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 18,
+                              fontSize: 15,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -101,7 +101,7 @@ class LoginScreen extends StatelessWidget {
                         children: [
                           Expanded(child: Divider()),
                           Text(
-                            "or sign in using",
+                            " or sign in using ",
                             style: TextStyle(color: Colors.white),
                           ),
                           Expanded(child: Divider()),
