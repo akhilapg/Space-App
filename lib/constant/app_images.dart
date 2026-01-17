@@ -9,3 +9,4 @@ class AppImages{
   static String facebook_img="assets/facebook_img.png";
   static String google_img="assets/google_img.png";
 }
+

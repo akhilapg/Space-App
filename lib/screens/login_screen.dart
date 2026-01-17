@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:space_app/constant/app_images.dart';
+import 'package:space_app/screens/home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -77,20 +78,28 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 5),
-                      Container(
-                        width: double.infinity,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          color: Colors.cyan,
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Sign in",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
+                      InkWell(
+                        onTap: ()=>Navigator.push(context,MaterialPageRoute(builder: (context)=>HomeScreen())),
+                        child: Container(
+                          width: double.infinity,
+                          height: 40,
+                          decoration: BoxDecoration(
+                        
+                            gradient: LinearGradient(
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                              colors: [Color(0xffb550cb) , Color(0xFF03b5b7),Color(0xFF329abd)],
+                            ),
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: Center(
+                            child: Text(
+                              "Sign in",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ),
@@ -153,11 +162,12 @@ Widget inputField({
     obscureText: isPassword,
     style: TextStyle(color: Colors.white),
     decoration: InputDecoration(
+
       prefixIcon: Icon(icon, color: Colors.white70),
       hintText: hint,
       hintStyle: TextStyle(color: Colors.white54),
       filled: true,
-      fillColor: Colors.black,
+      fillColor: Colors.black.withOpacity(0.50),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(30),
         borderSide: BorderSide.none,
