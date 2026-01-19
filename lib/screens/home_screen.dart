@@ -23,13 +23,14 @@ class HomeScreen extends StatelessWidget {
           preferredSize: Size.fromHeight(100),
           child: AppBar(
             flexibleSpace: Container(
+              // color: Colors.black.withOpacity(0.5),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(30),
                   bottomRight: Radius.circular(30),
                 ),
                 border: Border(
-                  bottom: BorderSide(color: Colors.black, width: 2.0),
+                  bottom: BorderSide(color: Colors.black, width: 1.0),
                 ),
               ),
               child: Row(
@@ -37,12 +38,12 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Container(
                     // margin: EdgeInsets.only(left: 40, top: 30),
-                    width: 70,
-                    height: 70,
+                    width: 40,
+                    height: 40,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(30)),
                       color: Colors.transparent,
-                      border: Border.all(color: Colors.black, width: 2.0),
+                      border: Border.all(color: Colors.black26, width: 2.0),
                     ),
                     child: Icon(Icons.density_medium, color: Colors.white),
                   ),
@@ -56,7 +57,7 @@ class HomeScreen extends StatelessWidget {
                         "Solar System",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 20,
+                          fontSize: 25,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -64,14 +65,14 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Container(
                     // margin: EdgeInsets.only(left: 20, top: 30),
-                    width: 70,
-                    height: 70,
+                    width: 40,
+                    height: 40,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(30)),
                       color: Colors.transparent,
-                      border: Border.all(color: Colors.black, width: 2.0),
+                      border: Border.all(color: Colors.black26, width: 2.0),
                     ),
-                    child: Icon(Icons.person, color: Colors.white),
+                    child: Icon(Icons.account_circle, color: Colors.white),
                   ),
                 ],
               ),
@@ -83,7 +84,7 @@ class HomeScreen extends StatelessWidget {
         ),
         body: Column(
           children: [
-            SizedBox(height: 30),
+            SizedBox(height: 25),
             SizedBox(
               width: double.infinity,
               height: 50,
@@ -201,11 +202,11 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 25),
             Container(
-              padding: EdgeInsets.all(5.0),
-              width: 400,
-              height: 120,
+              padding: EdgeInsets.all(20.0),
+              width: 320,
+              height: 160,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 color: Colors.black.withOpacity(0.3),
@@ -281,16 +282,17 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 25),
             Container(
-              padding: EdgeInsets.all(5.0),
-              width: 400,
-              height: 220,
+              padding: EdgeInsets.all(20.0),
+              width: 320,
+              height: 160,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 color: Colors.black.withOpacity(0.3),
               ),
               child: Column(
+                // mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
@@ -301,6 +303,7 @@ class HomeScreen extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
+                  SizedBox(height: 10,),
                   // Row(
                   //   children: [
                   Text(
