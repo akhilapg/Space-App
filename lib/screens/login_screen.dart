@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:space_app/constant/app_images.dart';
+import 'package:space_app/screens/bottom_navigation_screen.dart';
 import 'package:space_app/screens/home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -79,7 +80,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 5),
                       InkWell(
-                        onTap: ()=>Navigator.push(context,MaterialPageRoute(builder: (context)=>HomeScreen())),
+                        onTap: ()=>Navigator.push(context,MaterialPageRoute(builder: (context)=>BottomNavigationScreen())),
                         child: Container(
                           width: double.infinity,
                           height: 40,
@@ -185,6 +186,6 @@ Widget socialIcons(String image) {
     margin: const EdgeInsets.symmetric(horizontal: 25),
     padding: EdgeInsets.all(12),
     decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.black),
-    child: Image.asset(image, height: 25, width: 25),
+    child: Image.asset(image, height: 25, width: 25,fit: BoxFit.cover,),
   );
 }

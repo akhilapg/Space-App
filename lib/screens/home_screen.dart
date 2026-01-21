@@ -87,118 +87,26 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 25),
             SizedBox(
               width: double.infinity,
-              height: 50,
+              height: 60,
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                // itemCount: solar_planet_details["planet_names"].length,
-                // itemExtentBuilder: (context,index) =>buildPlanets(index),
+
                 children: [
-                  // buildPlanets(index)
-                  Container(
-                    width: 150,
-                    height: 10,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
-                      color: Colors.black.withOpacity(0.3),
-                    ),
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          solar_planet_details["planet_images"][0],
-                          fit: BoxFit.fill,
-                          width: 40,
-                        ),
-                        Text(
-                          solar_planet_details["planet_names"][0],
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    width: 150,
-                    height: 10,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
-                      color: Colors.black.withOpacity(0.3),
-                    ),
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          solar_planet_details["planet_images"][0],
-                          fit: BoxFit.fill,
-                          width: 40,
-                        ),
-                        Text(
-                          solar_planet_details["planet_names"][0],
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    width: 150,
-                    height: 10,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
-                      color: Colors.black.withOpacity(0.3),
-                    ),
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          solar_planet_details["planet_images"][0],
-                          fit: BoxFit.fill,
-                          width: 40,
-                        ),
-                        Text(
-                          solar_planet_details["planet_names"][0],
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    width: 150,
-                    height: 10,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
-                      color: Colors.black.withOpacity(0.3),
-                    ),
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          solar_planet_details["planet_images"][0],
-                          fit: BoxFit.fill,
-                          width: 40,
-                        ),
-                        Text(
-                          solar_planet_details["planet_names"][0],
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    width: 150,
-                    height: 10,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
-                      color: Colors.black.withOpacity(0.3),
-                    ),
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          solar_planet_details["planet_images"][0],
-                          fit: BoxFit.fill,
-                          width: 40,
-                        ),
-                        Text(
-                          solar_planet_details["planet_names"][0],
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ),
+                  buildPlanets(0),
+                  SizedBox(width: 50),
+                  buildPlanets(1),
+                  SizedBox(width: 50),
+                  buildPlanets(2),
+                  SizedBox(width: 50),
+                  buildPlanets(3),
+                  SizedBox(width: 50),
+                  buildPlanets(4),
+                  SizedBox(width: 50),
+                  buildPlanets(5),
+                  SizedBox(width: 50),
+                  buildPlanets(6),
+                  SizedBox(width: 50),
+                  buildPlanets(7),
                 ],
               ),
             ),
@@ -213,17 +121,18 @@ class HomeScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  Text(
-                    "Planet of the day",
-                    style: TextStyle(
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                  Align(
+                    alignment: AlignmentGeometry.topLeft,
+                    child: Text(
+                      "Planet of the day",
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
-                  // SizedBox(height: 10),
                   Row(
-                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
@@ -232,7 +141,9 @@ class HomeScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           image: DecorationImage(
-                            image: AssetImage("assets/mars_image.png"),
+                            image: AssetImage(
+                              solar_planet_details['planet_images'][1],
+                            ),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -260,24 +171,20 @@ class HomeScreen extends StatelessWidget {
                               ),
                             ),
                             SizedBox(height: 5),
+
                             // Spacer(),
-                            Text(
-                              "Details",
-                              style: TextStyle(
-                                fontSize: 10,
-                                color: Colors.white,
-                              ),
-                            ),
-                            Icon(
-                              Icons.arrow_forward,
-                              color: Colors.white,
-                              size: 10,
-                            ),
                             SizedBox(width: 5),
                           ],
                         ),
                       ),
                     ],
+                  ),
+                  Align(
+                    alignment: Alignment.bottomRight,
+                    child: Text(
+                      "Details →",
+                      style: TextStyle(fontSize: 10, color: Colors.white),
+                    ),
                   ),
                 ],
               ),
@@ -303,7 +210,7 @@ class HomeScreen extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(height: 10,),
+                  SizedBox(height: 10),
                   // Row(
                   //   children: [
                   Text(
@@ -319,51 +226,35 @@ class HomeScreen extends StatelessWidget {
             ),
           ],
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.language), label: 'Home'),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.favorite),
-              label: 'Favourites',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.more_horiz),
-              label: 'More',
-            ),
-          ],
-        ),
+       
       ),
     );
   }
 }
 
-// Widget buildPlanets(int index)
-// {
-//   return SizedBox(
-//       width: double.infinity,
-//       height: 100,
-//       child: ListView(
-//           scrollDirection: Axis.horizontal,
-//         children: [
-//     Container(
-//     width: 150,
-//     height: 10,
-//     decoration: BoxDecoration(
-//       borderRadius: BorderRadius.circular(30),
-//       color: Colors.black.withOpacity(0.3),
-//     ),
-//     child: Row(
-//       children: [
-//         Image.asset(
-//           solar_planet_details["planet_images"][0],
-//           fit: BoxFit.fill,
-//           width: 40,
-//         ),
-//         Text(solar_planet_details["planet_names"][0],style: TextStyle(color: Colors.white),),
-//       ],
-//     ),
-//     ),
-//       ],
-//   ),
-//   );
-// }
+// ignore: non_constant_identifier_names
+
+
+Widget buildPlanets(int index) {
+  return Container(
+    width: 100,
+    height: 40,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(30),
+      color: Colors.black.withOpacity(0.3),
+    ),
+    child: Row(
+      children: [
+        Image.asset(
+          solar_planet_details["planet_images"][index],
+          fit: BoxFit.contain,
+          width: 40,
+        ),
+        Text(
+          solar_planet_details["planet_names"][index],
+          style: TextStyle(color: Colors.white),
+        ),
+      ],
+    ),
+  );
+}
