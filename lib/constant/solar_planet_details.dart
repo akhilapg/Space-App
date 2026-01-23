@@ -19,4 +19,5 @@ Map<String, dynamic> solar_planet_details = {
     "assets/images/uranus_image.png",
     "assets/images/neptune_image.png",
   ],
+  "planet_description":["sdhifodghhgiohgiorjoigjeporwjgiojwgpojp\nsfkldjfslkjdskljfl\ndsfjf sdkhdskjfh\nlsdjklfjdsklfjskl"]
 };
