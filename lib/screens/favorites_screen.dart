@@ -19,13 +19,11 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
       width: 600,
       height: double.infinity,
       decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage(AppImages.app_background_image),
-        ),
+
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        appBar: buildCommonAppBar(),
+        appBar: buildCommonAppBar("favorites"),
         body: Padding(//parent child relationship
           padding: const EdgeInsets.all(10.0),
           child: ListView(

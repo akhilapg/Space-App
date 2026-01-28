@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       child: Scaffold(
-        appBar:buildCommonAppBar(),
+        appBar:buildCommonAppBar("solar"),
         backgroundColor: Colors.transparent,
         body: Column(
           children: [

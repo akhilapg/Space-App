@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-PreferredSize buildCommonAppBar(){
+PreferredSize buildCommonAppBar(String pageName){
   return  PreferredSize(
     preferredSize: Size.fromHeight(70),
     child: AppBar(
@@ -28,23 +28,40 @@ PreferredSize buildCommonAppBar(){
               ),
               child: Icon(Icons.density_medium, color: Colors.white),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Milky Way",
-                  style: TextStyle(color: Colors.white, fontSize: 10),
-                ),
-                Text(
-                  "Solar System",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
+            if(pageName=="solar")...[
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+
+                  Text(
+                    "Milky Way",
+                    style: TextStyle(color: Colors.white, fontSize: 10),
                   ),
+                  Text(
+                    "Solar System",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ]else if(pageName=="favorites")...[
+              Center(
+                child: Text(
+                  "Milky Way",
+                  style: TextStyle(color: Colors.white, fontSize: 30),
                 ),
-              ],
-            ),
+              ),
+
+            ]else if(pageName=="profile")...[
+              Text(
+                "Milky",
+                style: TextStyle(color: Colors.white, fontSize: 10),
+              ),
+            ],
+
             Container(
               // margin: EdgeInsets.only(left: 20, top: 30),
               width: 40,
