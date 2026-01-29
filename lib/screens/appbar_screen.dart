@@ -56,23 +56,25 @@ PreferredSize buildCommonAppBar(String pageName){
               ),
 
             ]else if(pageName=="profile")...[
-              Text(
-                "Milky",
-                style: TextStyle(color: Colors.white, fontSize: 10),
+              Center(
+                child: Text(
+                  "My Profile",
+                  style: TextStyle(color: Colors.white, fontSize: 30),
+                ),
               ),
             ],
 
-            Container(
-              // margin: EdgeInsets.only(left: 20, top: 30),
-              width: 40,
-              height: 40,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(30)),
-                color: Colors.transparent,
-                border: Border.all(color: Colors.black26, width: 2.0),
-              ),
-              child: Icon(Icons.account_circle, color: Colors.white),
+          pageName=="profile"? SizedBox():Container(
+            // margin: EdgeInsets.only(left: 20, top: 30),
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(30)),
+              color: Colors.transparent,
+              border: Border.all(color: Colors.black26, width: 2.0),
             ),
+            child: Icon(Icons.account_circle, color: Colors.white),
+          ),
           ],
         ),
       ),

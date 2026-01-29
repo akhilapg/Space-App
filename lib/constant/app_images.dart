@@ -9,5 +9,6 @@ class AppImages{
   static String twittter_img="assets/images/twittter_img.png";
   static String facebook_img="assets/images/facebook_img.png";
   static String google_img="assets/images/google_img.png";
+  static String profile_image="assets/images/profile_image.png";
 }
 

@@ -14,13 +14,11 @@ class FavoritesScreen extends StatefulWidget {
 class _FavoritesScreenState extends State<FavoritesScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       // padding: EdgeInsets.all(20.0),
       width: 600,
       height: double.infinity,
-      decoration: BoxDecoration(
 
-      ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: buildCommonAppBar("favorites"),
