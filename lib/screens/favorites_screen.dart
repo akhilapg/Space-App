@@ -98,6 +98,7 @@ Widget buildPlanets(int index) {
               //   ),
               // ),
               // Icon(Icons.favorite,size:10,color: Colors.white,),
+
               SizedBox(height: 5,),
               Text(
                 // maxLines: 3,
