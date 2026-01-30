@@ -88,16 +88,8 @@ Widget buildPlanets(int index) {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              // Positioned(
-              //   top: 10,
-              //   right: 80,
-              //   child: Icon(
-              //     Icons.favorite_border,
-              //     color: Colors.white,
-              //     size: 10,
-              //   ),
-              // ),
-              // Icon(Icons.favorite,size:10,color: Colors.white,),
+
+
               SizedBox(height: 5,),
               Text(
                 // maxLines: 3,
@@ -107,6 +99,7 @@ Widget buildPlanets(int index) {
               ),
               SizedBox(height: 10),
               SizedBox(width: 10),
+
               Align(
                 alignment: Alignment.bottomRight,
                 child: Text(
@@ -115,6 +108,14 @@ Widget buildPlanets(int index) {
                 ),
               ),
             ],
+          ),
+        ),
+        Align(
+          alignment: Alignment.topRight,
+          child: Icon(
+            Icons.favorite_border,
+            color: Colors.white,
+            size: 10,
           ),
         ),
       ],
