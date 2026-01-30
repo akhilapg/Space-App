@@ -78,7 +78,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 5),
+                      SizedBox(height:10),
                       InkWell(
                         onTap: ()=>Navigator.push(context,MaterialPageRoute(builder: (context)=>BottomNavigationScreen())),
                         child: Container(
@@ -105,7 +105,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 10),
+                      SizedBox(height: 15),
 
                       Row(
                         children: [
@@ -117,6 +117,7 @@ class LoginScreen extends StatelessWidget {
                           Expanded(child: Divider()),
                         ],
                       ),
+                      SizedBox(height:15,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -125,7 +126,7 @@ class LoginScreen extends StatelessWidget {
                           socialIcons(AppImages.google_img),
                         ],
                       ),
-                      SizedBox(height: 10),
+                      SizedBox(height: 15),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -133,6 +134,7 @@ class LoginScreen extends StatelessWidget {
                             "Don't have an account?",
                             style: TextStyle(color: Colors.white),
                           ),
+                          SizedBox(width: 5,),
                           Text(
                             "Sign Up",
                             style: TextStyle(
@@ -183,7 +185,7 @@ Widget inputField({
 
 Widget socialIcons(String image) {
   return Container(
-    margin: const EdgeInsets.symmetric(horizontal: 25),
+    margin: const EdgeInsets.symmetric(horizontal: 10),
     padding: EdgeInsets.all(12),
     decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.black),
     child: Image.asset(image, height: 25, width: 25,fit: BoxFit.cover,),

@@ -19,8 +19,8 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       child: Scaffold(
+        appBar: buildCommonAppbar(),
         backgroundColor: Colors.transparent,
-        appBar: buildAppbar(),
         body: Column(
           children: [
             SizedBox(height: 25),
@@ -88,7 +88,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(width: 10),
-                      Expanded(
+                         Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -97,7 +97,7 @@ class HomeScreen extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 10,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.white,
+                                color: Colors.cyanAccent,
                               ),
                             ),
                             // SizedBox(height: 10),

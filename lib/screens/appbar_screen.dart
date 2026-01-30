@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-PreferredSize buildAppbar(){
+PreferredSize buildCommonAppbar(String pageName) {
   return PreferredSize(
     preferredSize: Size.fromHeight(70),
     child: AppBar(
@@ -11,9 +11,7 @@ PreferredSize buildAppbar(){
             bottomLeft: Radius.circular(30),
             bottomRight: Radius.circular(30),
           ),
-          border: Border(
-            bottom: BorderSide(color: Colors.black, width: 1.0),
-          ),
+          border: Border(bottom: BorderSide(color: Colors.black, width: 1.0)),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -29,22 +27,46 @@ PreferredSize buildAppbar(){
               ),
               child: Icon(Icons.density_medium, color: Colors.white),
             ),
-            Column(
-              children: [
-                Text(
-                  "Milky Way",
-                  style: TextStyle(color: Colors.white, fontSize: 10),
-                ),
-                Text(
-                  "Solar System",
+            if (pageName == "solar") ...[
+              Column(
+                children: [
+                  Text(
+                    "Milky Way",
+                    style: TextStyle(color: Colors.white, fontSize: 10),
+                  ),
+                  Text(
+                    "Solar System",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ] else if (pageName == "favorites") ...[
+              Center(
+                child: Text(
+                  "Favorites",
                   style: TextStyle(
-                    color: Colors.white,
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
-              ],
-            ),
+              ),
+            ] else if (pageName == "profile") ...[
+              Center(
+                child: Text(
+                  "Profile",
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ],
             Container(
               // margin: EdgeInsets.only(left: 20, top: 30),
               width: 40,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:space_app/constant/app_images.dart';
+import 'package:space_app/constant/solar_planet_details.dart';
+import 'package:space_app/screens/appbar_screen.dart';
 
 class FavoritesScreen extends StatefulWidget {
   const FavoritesScreen({super.key});
@@ -12,84 +14,110 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20.0),
-      width: 320,
-      height: 160,
+      width: 600,
+      height: double.infinity,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(30),
-        color: Colors.black.withOpacity(0.3),
+        // color: Colors.black.withOpacity(0.3),
       ),
-      child: Column(
-        children: [
-          Align(
-            alignment: AlignmentGeometry.topLeft,
-            child: Text(
-              "Planet of the day",
-              style: TextStyle(
-                fontSize: 10,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
-            ),
+
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: buildCommonAppbar("favorites"),
+        body: Padding(
+          padding: EdgeInsets.all(10.0),
+          child: ListView(
+            scrollDirection: Axis.vertical,
+            children: [
+              buildPlanets(0),
+              SizedBox(height: 10),
+
+              buildPlanets(1),
+              SizedBox(height: 10),
+
+              buildPlanets(2),
+              SizedBox(height: 10),
+
+              buildPlanets(3),
+              SizedBox(height: 10),
+
+              buildPlanets(4),
+              SizedBox(height: 10),
+
+              buildPlanets(5),
+              SizedBox(height: 10),
+
+              buildPlanets(6),
+              SizedBox(height: 10),
+
+              buildPlanets(7),
+            ],
           ),
-          Row(
+        ),
+      ),
+    );
+  }
+}
+
+Widget buildPlanets(int index) {
+  return Container(
+    padding: EdgeInsets.all(20.0),
+    width: 200,
+    height: 120,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(30),
+      color: Colors.black.withOpacity(0.3),
+    ),
+    child: Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Image.asset(
+          solar_planet_details["planet_images"][index],
+          fit: BoxFit.contain,
+          width: 40,
+        ),
+        SizedBox(width: 15),
+        Expanded(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                width: 50,
-                height: 50,
-                // decoration: BoxDecoration(
-                  // borderRadius: BorderRadius.circular(8),
-                  // image: DecorationImage(
-                  //   image: AssetImage(AppImages.
-                      // solar_planet_details['planet_images'][1],
-
-                    // ),
-                    // fit: BoxFit.cover,
-                  // ),
-                // ),
+              Text(
+                solar_planet_details["planet_names"][index],
+                style: TextStyle(
+                  color: Colors.cyanAccent,
+                  fontSize: 10,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
+              // Positioned(
+              //   top: 10,
+              //   right: 80,
+              //   child: Icon(
+              //     Icons.favorite_border,
+              //     color: Colors.white,
+              //     size: 10,
+              //   ),
+              // ),
+              // Icon(Icons.favorite,size:10,color: Colors.white,),
+              SizedBox(height: 5,),
+              Text(
+                // maxLines: 3,
+                textAlign: TextAlign.start,
+                solar_planet_details["planet_description"][index],
+                style: TextStyle(color: Colors.white, fontSize: 10),
+              ),
+              SizedBox(height: 10),
               SizedBox(width: 10),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Mars",
-                      style: TextStyle(
-                        fontSize: 10,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
-                    ),
-                    // SizedBox(height: 10),
-                    Text(
-                      "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, only being larger than Mercury."
-                          " In the English language, Mars is named for the Roman god of war.",
-                      style: TextStyle(
-                        fontSize: 8,
-                        color: Colors.white,
-                      ),
-                    ),
-                    SizedBox(height: 5),
-
-                    // Spacer(),
-                    SizedBox(width: 5),
-                  ],
+              Align(
+                alignment: Alignment.bottomRight,
+                child: Text(
+                  "Details ->",
+                  style: TextStyle(fontSize: 10, color: Colors.white),
                 ),
               ),
             ],
           ),
-          Align(
-            alignment: Alignment.bottomRight,
-            child: Text(
-              "Details →",
-              style: TextStyle(fontSize: 10, color: Colors.white),
-            ),
-          ),
-        ],
-      ),
-
-    );
-  }
+        ),
+      ],
+    ),
+  );
 }
