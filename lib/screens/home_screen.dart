@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:space_app/constant/solar_planet_details.dart';
 import 'package:space_app/screens/appbar_screen.dart';
+import 'package:space_app/screens/planet_wise_detials_screen.dart';
 
 import '../constant/app_images.dart';
 
@@ -19,7 +20,7 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       child: Scaffold(
-        appBar: buildCommonAppbar(),
+        appBar: buildCommonAppbar("solar"),
         backgroundColor: Colors.transparent,
         body: Column(
           children: [
@@ -31,21 +32,21 @@ class HomeScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
 
                 children: [
-                  buildPlanets(0),
+                  buildPlanets(0,context),
                   SizedBox(width: 50),
-                  buildPlanets(1),
+                  buildPlanets(1,context),
                   SizedBox(width: 50),
-                  buildPlanets(2),
+                  buildPlanets(2,context),
                   SizedBox(width: 50),
-                  buildPlanets(3),
+                  buildPlanets(3,context),
                   SizedBox(width: 50),
-                  buildPlanets(4),
+                  buildPlanets(4,context),
                   SizedBox(width: 50),
-                  buildPlanets(5),
+                  buildPlanets(5,context),
                   SizedBox(width: 50),
-                  buildPlanets(6),
+                  buildPlanets(6,context),
                   SizedBox(width: 50),
-                  buildPlanets(7),
+                  buildPlanets(7,context),
                 ],
               ),
             ),
@@ -174,26 +175,31 @@ class HomeScreen extends StatelessWidget {
 // ignore: non_constant_identifier_names
 
 
-Widget buildPlanets(int index) {
-  return Container(
-    width: 100,
-    height: 40,
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(30),
-      color: Colors.black.withOpacity(0.3),
-    ),
-    child: Row(
-      children: [
-        Image.asset(
-          solar_planet_details["planet_images"][index],
-          fit: BoxFit.contain,
-          width: 40,
-        ),
-        Text(
-          solar_planet_details["planet_names"][index],
-          style: TextStyle(color: Colors.white),
-        ),
-      ],
+Widget buildPlanets(int index,BuildContext context) {
+  return InkWell(
+    onTap: (){
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>PlanetWiseDetialsScreen()));
+    },
+    child: Container(
+      width: 100,
+      height: 40,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30),
+        color: Colors.black.withOpacity(0.3),
+      ),
+      child: Row(
+        children: [
+          Image.asset(
+            solar_planet_details["planet_images"][index],
+            fit: BoxFit.contain,
+            width: 40,
+          ),
+          Text(
+            solar_planet_details["planet_names"][index],
+            style: TextStyle(color: Colors.white),
+          ),
+        ],
+      ),
     ),
   );
 }
