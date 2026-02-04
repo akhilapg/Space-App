@@ -62,7 +62,7 @@ Widget buildPlanets(int index) {
   return Container(
     padding: EdgeInsets.all(20.0),
     width: 200,
-    height: 120,
+    height: 130,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(30),
       color: Colors.black.withOpacity(0.3),
@@ -84,7 +84,7 @@ Widget buildPlanets(int index) {
                 solar_planet_details["planet_names"][index],
                 style: TextStyle(
                   color: Colors.cyanAccent,
-                  fontSize: 10,
+                  fontSize: 12,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -97,14 +97,14 @@ Widget buildPlanets(int index) {
                 solar_planet_details["planet_description"][index],
                 style: TextStyle(color: Colors.white, fontSize: 10),
               ),
-              SizedBox(height: 10),
-              SizedBox(width: 10),
+              SizedBox(height: 8),
+              SizedBox(width: 8),
 
               Align(
                 alignment: Alignment.bottomRight,
                 child: Text(
                   "Details ->",
-                  style: TextStyle(fontSize: 10, color: Colors.white),
+                  style: TextStyle(fontSize: 12, color: Colors.white),
                 ),
               ),
             ],
@@ -115,7 +115,7 @@ Widget buildPlanets(int index) {
           child: Icon(
             Icons.favorite_border,
             color: Colors.white,
-            size: 10,
+            size: 20,
           ),
         ),
       ],

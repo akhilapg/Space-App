@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:space_app/constant/solar_planet_details.dart';
 import 'package:space_app/screens/appbar_screen.dart';
-import 'package:space_app/screens/planet_wise_detials_screen.dart';
+import 'package:space_app/screens/planet_wise_details_screen.dart';
 
 import '../constant/app_images.dart';
 
@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         body: Column(
           children: [
-            SizedBox(height: 25),
+            SizedBox(height: 35),
             SizedBox(
               width: double.infinity,
               height: 60,
@@ -33,28 +33,28 @@ class HomeScreen extends StatelessWidget {
 
                 children: [
                   buildPlanets(0,context),
-                  SizedBox(width: 50),
+                  SizedBox(width: 20),
                   buildPlanets(1,context),
-                  SizedBox(width: 50),
+                  SizedBox(width: 20),
                   buildPlanets(2,context),
-                  SizedBox(width: 50),
+                  SizedBox(width: 20),
                   buildPlanets(3,context),
-                  SizedBox(width: 50),
+                  SizedBox(width: 20),
                   buildPlanets(4,context),
-                  SizedBox(width: 50),
+                  SizedBox(width: 20),
                   buildPlanets(5,context),
-                  SizedBox(width: 50),
+                  SizedBox(width: 20),
                   buildPlanets(6,context),
-                  SizedBox(width: 50),
+                  SizedBox(width: 20),
                   buildPlanets(7,context),
                 ],
               ),
             ),
-            SizedBox(height: 25),
+            SizedBox(height: 35),
             Container(
               padding: EdgeInsets.all(20.0),
               width: 320,
-              height: 160,
+              height: 180,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 color: Colors.black.withOpacity(0.3),
@@ -66,12 +66,13 @@ class HomeScreen extends StatelessWidget {
                     child: Text(
                       "Planet of the day",
                       style: TextStyle(
-                        fontSize: 10,
-                        fontWeight: FontWeight.bold,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w900,
                         color: Colors.white,
                       ),
                     ),
                   ),
+                  SizedBox(height: 10,),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -101,7 +102,7 @@ class HomeScreen extends StatelessWidget {
                                 color: Colors.cyanAccent,
                               ),
                             ),
-                            // SizedBox(height: 10),
+                            SizedBox(height: 5),
                             Text(
                               "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, only being larger than Mercury."
                               " In the English language, Mars is named for the Roman god of war.",
@@ -110,10 +111,10 @@ class HomeScreen extends StatelessWidget {
                                 color: Colors.white,
                               ),
                             ),
-                            SizedBox(height: 5),
+                            SizedBox(height: 10),
 
                             // Spacer(),
-                            SizedBox(width: 5),
+                            SizedBox(width: 10),
                           ],
                         ),
                       ),
@@ -129,11 +130,11 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 25),
+            SizedBox(height: 35),
             Container(
               padding: EdgeInsets.all(20.0),
               width: 320,
-              height: 160,
+              height: 180,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 color: Colors.black.withOpacity(0.3),
@@ -145,8 +146,8 @@ class HomeScreen extends StatelessWidget {
                   Text(
                     "Solar system",
                     style: TextStyle(
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w900,
                       color: Colors.white,
                     ),
                   ),
@@ -159,7 +160,7 @@ class HomeScreen extends StatelessWidget {
                     "The vast majority (99.86%) of the system's mass is in the Sun, with most of the remaining mass contained in the planet Jupiter. "
                     "The four inner system planets—Mercury, Venus, Earth and Mars—are terrestrial planets, being composed primarily of rock and metal. "
                     "The four giant planets of the outer system are substantially larger and more massive than the terrestrials. ",
-                    style: TextStyle(fontSize: 8, color: Colors.white),
+                    style: TextStyle(fontSize: 8, color: Colors.white,),maxLines: 20,
                   ),
                 ],
               ),
@@ -178,7 +179,7 @@ class HomeScreen extends StatelessWidget {
 Widget buildPlanets(int index,BuildContext context) {
   return InkWell(
     onTap: (){
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>PlanetWiseDetialsScreen()));
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>PlanetWiseDetailsScreen()));
     },
     child: Container(
       width: 100,

@@ -50,35 +50,35 @@ class LoginScreen extends StatelessWidget {
                       Align(
                         alignment: Alignment.topLeft,
                         child: Text(
-                          "Sign In",
+                          "Sign in",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 23,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w900,
                           ),
                         ),
                       ),
                       SizedBox(height: 5),
 
                       inputField(hint: "Email", icon: Icons.email),
-                      SizedBox(height: 5),
+                      SizedBox(height: 20),
                       inputField(
                         hint: "Password",
                         icon: Icons.lock,
                         isPassword: true,
                       ),
-                      SizedBox(height: 5),
+                      SizedBox(height: 10),
                       Align(
                         alignment: Alignment.centerLeft,
                         child: TextButton(
                           onPressed: () {},
                           child: const Text(
                             "Forgot Password?",
-                            style: TextStyle(color: Colors.cyanAccent),
+                            style: TextStyle(color: Colors.cyan),
                           ),
                         ),
                       ),
-                      SizedBox(height:10),
+                      SizedBox(height:12),
                       InkWell(
                         onTap: ()=>Navigator.push(context,MaterialPageRoute(builder: (context)=>BottomNavigationScreen())),
                         child: Container(
@@ -98,26 +98,26 @@ class LoginScreen extends StatelessWidget {
                               "Sign in",
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                                fontWeight: FontWeight.w900,
                               ),
                             ),
                           ),
                         ),
                       ),
-                      SizedBox(height: 15),
+                      SizedBox(height: 20),
 
                       Row(
                         children: [
                           Expanded(child: Divider()),
                           Text(
                             " or sign in using ",
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(color: Colors.grey),
                           ),
-                          Expanded(child: Divider()),
+                          Expanded(child: Divider(color: Colors.grey,)),
                         ],
                       ),
-                      SizedBox(height:15,),
+                      SizedBox(height:25,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -126,19 +126,19 @@ class LoginScreen extends StatelessWidget {
                           socialIcons(AppImages.google_img),
                         ],
                       ),
-                      SizedBox(height: 15),
+                      SizedBox(height: 25),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             "Don't have an account?",
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(color: Colors.grey),
                           ),
                           SizedBox(width: 5,),
                           Text(
                             "Sign Up",
                             style: TextStyle(
-                              color: Colors.cyanAccent,
+                              color: Colors.cyan,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

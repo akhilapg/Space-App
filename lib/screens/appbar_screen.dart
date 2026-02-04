@@ -58,7 +58,7 @@ PreferredSize buildCommonAppbar(String pageName) {
             ] else if (pageName == "profile") ...[
               Center(
                 child: Text(
-                  "Profile",
+                  "My Profile",
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,

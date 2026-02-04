@@ -10,5 +10,6 @@ class AppImages{
   static String facebook_img="assets/images/facebook_img.png";
   static String google_img="assets/images/google_img.png";
   static String inner_page_image="assets/images/inner_page.png";
+  static String profile_image="assets/images/profile_image.png";
 }
 
